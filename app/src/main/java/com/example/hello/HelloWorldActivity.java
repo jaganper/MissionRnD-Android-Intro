@@ -12,14 +12,24 @@ import android.widget.TextView;
 
 public class HelloWorldActivity extends ActionBarActivity {
 
-    //Put your code here
+    //STARTREPLACE
+    private TextView textView;
+    private TextView textViewRed;
+    //ENDREPLACE
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_helloworld);
 
-        //Put your code here
+        //STARTREPLACE
+        textView = (TextView) findViewById(R.id.helloText);
+        textView.setText("This is my Hello World App");
+
+        textViewRed = (TextView) findViewById(R.id.helloTextRed);
+        textViewRed.setTextColor(Color.RED);
+        textViewRed.setText("This is my Hello World App");
+        //ENDREPLACE
     }
 
     @Override
